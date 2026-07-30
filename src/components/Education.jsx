@@ -112,35 +112,13 @@ const Education = () => {
 
                 {/* Dot */}
                 <div
-                  className="
-                  absolute
-                  left-[9px]
-                  md:left-1/2
-                  md:-translate-x-1/2
-                  top-6
-                  w-5
-                  h-5
-                  rounded-full
-                  bg-purple-500
-                  shadow-[0_0_20px_rgba(168,85,247,0.8)]
-                  "
+                  className="absolute left-[9px] md:left-1/2 md:-translate-x-1/2 top-6 w-5 h-5 rounded-full bg-purple-500 shadow-[0_0_20px_rgba(168,85,247,0.8)]"
                 ></div>
 
 
                 {/* Card */}
                 <div
-                  className="
-                  ml-12
-                  md:ml-0
-                  w-full
-                  md:w-[45%]
-                  rounded-2xl
-                  p-[1px]
-                  bg-gradient-to-br
-                  from-purple-500
-                  via-purple-700
-                  to-transparent
-                  "
+                  className="ml-12 md:ml-0 w-full md:w-[45%] rounded-2xl p-[1px] bg-gradient-to-br from-purple-500 via-purple-700 to-transparent"
                 >
 
                   <motion.div
@@ -152,9 +130,7 @@ const Education = () => {
                     bg-[#0a0a0a]
                     p-7
                     shadow-[0_0_30px_rgba(168,85,247,0.25)]
-                    hover:shadow-[0_0_45px_rgba(168,85,247,0.5)]
-                    transition-all
-                    "
+                    hover:shadow-[0_0_45px_rgba(168,85,247,0.5)] transition-all"
                   >
 
                     <div className="flex items-center gap-3">
