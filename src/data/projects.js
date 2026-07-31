@@ -104,7 +104,7 @@ export const projects = [
       "Lucide React",
     ],
 
-    live: "https://your-live-link.com",
+    live: "https://my-portfolio-indol-alpha-uczfljwvm9.vercel.app",
 
     github: "https://github.com/Nishat-Yeasmin/My-Portfolio",
 
