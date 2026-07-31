@@ -84,17 +84,20 @@ Open **http://localhost:3000** in your browser.
 
 ---
 
-## 📸 Preview
+<h2>📸 Preview</h2>
 
-Add screenshots of your portfolio here.
-
-```
-images/portfolio.png
-images/skills.png
-images/education.png
-images/projects.png
-
-```
+<p align="center">
+  <img src="./public/images/portfolio.png" alt="Portfolio Preview" width="900"/>
+</p>
+<p align="center">
+  <img src="./public/images/skills.png" alt="Portfolio Preview" width="900"/>
+</p>
+<p align="center">
+  <img src="./public/images/education.png" alt="Portfolio Preview" width="900"/>
+</p>
+<p align="center">
+  <img src="./public/images/projects.png" alt="Portfolio Preview" width="900"/>
+</p>
 
 ---
 
