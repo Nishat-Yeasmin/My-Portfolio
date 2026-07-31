@@ -62,7 +62,7 @@ export default function Footer() {
 
             <motion.a
               whileHover={{ y: -5, scale: 1.15 }}
-              href="https://github.com/yourusername"
+              href="https://github.com/Nishat-Yeasmin"
               target="_blank"
               className="text-2xl text-gray-400 hover:text-purple-500 transition"
             >
@@ -71,7 +71,7 @@ export default function Footer() {
 
             <motion.a
               whileHover={{ y: -5, scale: 1.15 }}
-              href="https://linkedin.com/in/yourusername"
+              href="https://www.linkedin.com/in/nishatyeasmin"
               target="_blank"
               className="text-2xl text-gray-400 hover:text-purple-500 transition"
             >
@@ -80,7 +80,7 @@ export default function Footer() {
 
             <motion.a
               whileHover={{ y: -5, scale: 1.15 }}
-              href="https://facebook.com/yourusername"
+              href="https://www.facebook.com/share/1EvXMzaW7c"
               target="_blank"
               className="text-2xl text-gray-400 hover:text-purple-500 transition"
             >
