@@ -10,6 +10,7 @@ const links = [
   { name: "About", href: "#about" },
   { name: "Skills", href: "#skills" },
   { name: "Projects", href: "#projects" },
+  {name: "Achievements", href: "achievements"},
   { name: "Contact", href: "#contact" },
 ];
 
@@ -50,7 +51,7 @@ export default function Navbar() {
             <img
               src="/profile.jpg"
               alt="Nishat Yeasmin"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover object-[center_1%]"
             />
 
           </div>

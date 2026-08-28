@@ -1,7 +1,8 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import {
   FiGithub,
@@ -25,6 +26,18 @@ const textAnimation = {
 };
 
 export default function Hero() {
+
+  const roles = ["Full-Stack Web Developer", "Competitive Programmer"];
+const [roleIndex, setRoleIndex] = useState(0);
+
+useEffect(() => {
+  const interval = setInterval(() => {
+    setRoleIndex((prev) => (prev + 1) % roles.length);
+  }, 2500);
+
+  return () => clearInterval(interval);
+}, []);
+
   return (
     <section
       id="home"
@@ -64,13 +77,23 @@ export default function Hero() {
           </motion.h1>
 
 
-          <motion.h2
-            variants={textAnimation}
-            className="text-2xl md:text-4xl font-semibold mt-4"
-          >
-            Full-Stack Web Developer
-          </motion.h2>
-
+        <motion.h2
+  variants={textAnimation}
+  className="text-2xl md:text-4xl font-semibold mt-4 h-12 md:h-14 overflow-hidden"
+>
+  <AnimatePresence mode="wait">
+    <motion.span
+      key={roleIndex}
+      initial={{ opacity: 0, y: 25 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -25 }}
+      transition={{ duration: 0.5 }}
+      className="inline-block text-purple-500"
+    >
+      {roles[roleIndex]}
+    </motion.span>
+  </AnimatePresence>
+</motion.h2>
 
           <motion.p
             variants={textAnimation}
@@ -190,7 +213,7 @@ export default function Hero() {
               fill
               priority
               sizes="(max-width: 768px) 288px, 384px"
-              className="object-cover rounded-full border-4 border-purple-500 shadow-[0_0_50px_rgba(168,85,247,0.8)]"
+              className="object-cover object-[center_1%] rounded-full border-4 border-purple-500 shadow-[0_0_50px_rgba(168,85,247,0.8)]"
             />
 
           </motion.div>
