@@ -57,7 +57,7 @@ const achievements = [
   {
     id: 5,
     title: "CodeChef Silver Star",
-    year: "2024",
+    year: "2025",
     description:
       "Achieved Silver Star rating on CodeChef through consistent problem solving and competitive programming practice.",
     image: "/certificates/codechef-silver.png",

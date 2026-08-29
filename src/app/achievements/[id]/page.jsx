@@ -8,6 +8,7 @@ import {
   Star,
 } from "lucide-react";
 
+
 const achievements = {
   1: {
     title: "Web Development Course",
@@ -15,7 +16,8 @@ const achievements = {
     category: "Certification",
     description:
       "Successfully completed the Complete Web Development Course by Programming Hero. Through this course, I developed practical skills in modern Full Stack Web Development and worked on real-world projects using various frontend and backend technologies.",
-   pdf: "/certificates/Web development.pdf",
+   image: "/certificates/programming-hero.png",
+      pdf: "/certificates/Web development.pdf",
     icon: Award,
    
   },
@@ -38,9 +40,12 @@ const achievements = {
     category: "Competitive Programming",
     description:
       "Successfully completed the 2-month-long online CodeChef Camp 2.0 by Shohoj Coding, conducted from 12 February 2026 to 17 May 2026.",
+      image: "/certificates/codechef-camp.png",
       pdf: "/certificates/CC-2.2_completion.pdf",
     certificate: "/certificates/CC-2.0_completion.pdf",
     icon: Trophy,
+     buttonText: "View CodeChef Profile",
+    link: "https://www.codechef.com/users/nishatchef_70",
   },
 
   4: {
@@ -49,7 +54,7 @@ const achievements = {
     category: "Volunteering",
     description:
       "Received this certificate in recognition of my active participation, valuable contribution, teamwork, and dedication as a volunteer in various activities and initiatives.",
-    image: "/certificates/volunteering.png",
+    image: "/certificates/Volunteering.png",
     icon: Trophy,
    
   },
@@ -63,7 +68,7 @@ const achievements = {
     image: "/certificates/codechef-silver.png",
     icon: Star,
     buttonText: "View CodeChef Profile",
-    link: "https://www.codechef.com/",
+    link: "https://www.codechef.com/users/nishatchef_70",
   },
 };
 
@@ -183,15 +188,32 @@ export default async function AchievementDetails({ params }) {
           </div>
 
           {/* ONLY ONE Certificate Button */}
-          <div className="mt-8">
-            <Link
-              href={`/achievements/${id}/certificate`}
-              className="inline-flex items-center gap-2 rounded-lg bg-purple-600 px-6 py-3 text-sm font-medium text-white shadow-[0_0_20px_rgba(168,85,247,0.2)] transition-all duration-300 hover:bg-purple-500 hover:shadow-[0_0_30px_rgba(168,85,247,0.4)]"
-            >
-              View Certificate
-              <ExternalLink size={16} />
-            </Link>
-          </div>
+         {/* Action Buttons */}
+<div className="mt-8 flex flex-wrap gap-4">
+
+  {/* Certificate Button */}
+  <Link
+    href={`/achievements/${id}/certificate`}
+    className="inline-flex items-center gap-2 rounded-lg bg-purple-600 px-6 py-3 text-sm font-medium text-white shadow-[0_0_20px_rgba(168,85,247,0.2)] transition-all duration-300 hover:bg-purple-500 hover:shadow-[0_0_30px_rgba(168,85,247,0.4)]"
+  >
+    View Certificate
+    <ExternalLink size={16} />
+  </Link>
+
+  {/* CodeChef Profile Button */}
+  {achievement.link && (
+    <Link
+      href={achievement.link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center gap-2 rounded-lg border border-purple-500/40 bg-purple-600/10 px-6 py-3 text-sm font-medium text-purple-300 transition-all duration-300 hover:border-purple-500 hover:bg-purple-600/20 hover:text-purple-200"
+    >
+      {achievement.buttonText || "View Profile"}
+      <ExternalLink size={16} />
+    </Link>
+  )}
+
+</div>
 
         </div>
 
