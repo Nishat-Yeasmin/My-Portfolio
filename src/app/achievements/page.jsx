@@ -1,3 +1,4 @@
+"use client"
 import Link from "next/link";
 import {
   Award,
@@ -7,7 +8,7 @@ import {
   ArrowUpRight,
   FileText,
 } from "lucide-react";
-
+import { motion } from "framer-motion";
 
 const achievements = [
   {
@@ -111,15 +112,37 @@ export default function AllAchievements() {
         {/* All Achievement Cards */}
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
 
-          {achievements.map((achievement) => {
-            const Icon = achievement.icon;
+       {achievements.map((achievement, index) => {
+  const Icon = achievement.icon;
 
-            return (
-              <Link
-                key={achievement.id}
-                href={`/achievements/${achievement.id}`}
-                className="group relative block h-full"
-              >
+  return (
+    <motion.div
+      key={achievement.id}
+      initial={{
+        opacity: 0,
+        y: 35,
+      }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+      }}
+      transition={{
+        duration: 0.8,
+        delay: index * 0.07,
+        ease: "easeOut",
+      }}
+      viewport={{
+        once: true,
+        amount: 0.1,
+      }}
+      whileHover={{
+        y: -12,
+      }}
+    >
+      <Link
+        href={`/achievements/${achievement.id}`}
+        className="group relative block h-full"
+      >
                 <div className="relative h-full overflow-hidden rounded-2xl border border-purple-900/60 bg-gradient-to-b from-purple-950/20 via-black to-black p-5 shadow-[0_0_25px_rgba(168,85,247,0.08)] transition-all duration-500 hover:-translate-y-2 hover:border-purple-500/70 hover:shadow-[0_0_35px_rgba(168,85,247,0.22)]">
 
                   {/* Top Line */}
@@ -199,9 +222,10 @@ export default function AllAchievements() {
                   </div>
 
                 </div>
-              </Link>
-            );
-          })}
+                  </Link>
+    </motion.div>
+  );
+})}
 
         </div>
 

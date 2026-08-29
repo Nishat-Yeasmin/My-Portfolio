@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { projects } from "@/data/projects";
+import { ArrowUpRight } from "lucide-react";
 
 export default function Projects() {
   return (
@@ -12,7 +13,7 @@ export default function Projects() {
       className="relative overflow-hidden bg-black py-24"
     >
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-purple-950/20 to-black" />
+      <div className="absolute inset-0 bg-gradient-to-b from-purple-950/30 via-black to-black" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-5">
 
@@ -38,7 +39,7 @@ export default function Projects() {
         {/* Cards */}
         <div className="mt-16 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
 
-          {projects.map((project, index) => (
+          {projects.slice(0,3).map((project, index) => (
 
             <motion.div
               key={project.id}
@@ -140,6 +141,27 @@ export default function Projects() {
           ))}
 
         </div>
+
+        {/* View All Projects Button */}
+<motion.div
+  initial={{ opacity: 0, y: 25 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.6, delay: 0.3 }}
+  className="mt-12 flex justify-center"
+>
+  <Link
+    href="/projects"
+    className="group inline-flex items-center gap-2 rounded-lg border border-purple-600/60 bg-purple-600/10 px-7 py-3 text-sm font-medium text-purple-300 transition-all duration-300 hover:border-purple-500 hover:bg-purple-600/20 hover:text-purple-200 hover:shadow-[0_0_25px_rgba(168,85,247,0.25)]"
+  >
+    View All Projects
+
+    <ArrowUpRight
+      size={17}
+      className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+    />
+  </Link>
+</motion.div>
 
       </div>
     </section>

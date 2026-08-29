@@ -88,7 +88,7 @@ useEffect(() => {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -25 }}
       transition={{ duration: 0.5 }}
-      className="inline-block text-purple-500"
+     className="inline-block bg-gradient-to-r from-white via-purple-500 to-fuchsia-600 bg-clip-text text-transparent"
     >
       {roles[roleIndex]}
     </motion.span>

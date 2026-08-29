@@ -66,22 +66,22 @@ const achievements = [
   },
 ];
 
-const cardVariants = {
-  hidden: {
-    opacity: 0,
-    y: 50,
-  },
+// const cardVariants = {
+//   hidden: {
+//     opacity: 0,
+//     y: 50,
+//   },
 
-  visible: (index) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.6,
-      delay: index * 0.15,
-      ease: "easeOut",
-    },
-  }),
-};
+//   visible: (index) => ({
+//     opacity: 1,
+//     y: 0,
+//     transition: {
+//       duration: 0.6,
+//       delay: index * 0.15,
+//       ease: "easeOut",
+//     },
+//   }),
+// };
 
 export default function Achievements() {
   // Main page only shows first 3
@@ -92,8 +92,9 @@ export default function Achievements() {
       id="achievements"
       className="relative min-h-screen overflow-hidden bg-black px-5 py-24 text-white sm:px-8 lg:px-16"
     >
-      {/* Background Glow */}
-      <div className="pointer-events-none absolute left-1/2 top-10 h-[350px] w-[350px] -translate-x-1/2 rounded-full bg-purple-700/10 blur-[130px]" />
+     
+     {/* Background Glow */}
+<div className="pointer-events-none absolute inset-x-0 top-0 h-[450px] bg-gradient-to-b from-purple-950/50 via-black to-transparent blur-[20px]" />
 
       <div className="relative mx-auto max-w-7xl">
 
@@ -130,26 +131,40 @@ export default function Achievements() {
         </motion.div>
 
         {/* First 3 Achievement Cards */}
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.15 }}
-          className="grid gap-8 md:grid-cols-2 lg:grid-cols-3"
-        >
+     <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+
           {featuredAchievements.map((achievement, index) => {
             const Icon = achievement.icon;
 
             return (
               <motion.div
-                key={achievement.id}
-                custom={index}
-                variants={cardVariants}
-              >
+  key={achievement.id}
+  initial={{
+    opacity: 0,
+    y: 40,
+  }}
+  whileInView={{
+    opacity: 1,
+    y: 0,
+  }}
+  transition={{
+    duration: 0.6,
+    delay: index * 0.10,
+    ease: "easeOut",
+  }}
+  viewport={{
+    once: true,
+    amount: 0.2,
+  }}
+  whileHover={{
+    y: -12,
+  }}
+>
                 <Link
                   href={`/achievements/${achievement.id}`}
                   className="group relative block h-full"
                 >
-                  <div className="relative h-full overflow-hidden rounded-2xl border border-purple-900/60 bg-gradient-to-b from-purple-950/20 via-black to-black p-5 shadow-[0_0_25px_rgba(168,85,247,0.08)] transition-all duration-500 hover:-translate-y-2 hover:border-purple-500/70 hover:shadow-[0_0_35px_rgba(168,85,247,0.22)]">
+                  <div className="relative h-full overflow-hidden rounded-2xl border border-purple-900/60 bg-gradient-to-b from-purple-950/20 via-black to-black p-5 shadow-[0_0_25px_rgba(168,85,247,0.08)] transition-all duration-500 hover:border-purple-500/70 hover:shadow-[0_0_35px_rgba(168,85,247,0.22)]">
 
                     {/* Top Glow */}
                     <div className="absolute left-1/2 top-0 h-[2px] w-20 -translate-x-1/2 bg-purple-500 opacity-60 transition-all duration-500 group-hover:w-36 group-hover:opacity-100" />
@@ -228,7 +243,7 @@ export default function Achievements() {
               </motion.div>
             );
           })}
-        </motion.div>
+       </div>
 
         {/* View All Achievements Button */}
         <motion.div

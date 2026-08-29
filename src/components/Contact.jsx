@@ -31,7 +31,7 @@ export default function Contact() {
       className="relative bg-black py-24 px-5 overflow-hidden"
     >
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-purple-950/20 to-black"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-purple-950/30 via-black to-black"></div>
 
       <div className="relative z-10 max-w-5xl mx-auto">
 
