@@ -3,7 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import Link from "next/link";
+
 import {
   FiGithub,
   FiLinkedin,
@@ -27,7 +27,7 @@ const textAnimation = {
 
 export default function Hero() {
 
-  const roles = ["Full-Stack Web Developer", "Competitive Programmer"];
+  const roles = ["Full-Stack Web Developer", "Competitive Programmer", "Aspiring Software Engineer"];
 const [roleIndex, setRoleIndex] = useState(0);
 
 useEffect(() => {
