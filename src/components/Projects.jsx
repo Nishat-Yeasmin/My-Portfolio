@@ -7,6 +7,13 @@ import { projects } from "@/data/projects";
 import { ArrowUpRight } from "lucide-react";
 
 export default function Projects() {
+
+  const homeProjects = [
+  projects.find((project) => project.id === "trip-plan-ai"),
+  projects.find((project) => project.id === "event-sphere"),
+  projects.find((project) => project.id === "portfolio"),
+].filter(Boolean);
+
   return (
     <section
       id="projects"
@@ -39,7 +46,7 @@ export default function Projects() {
         {/* Cards */}
         <div className="mt-16 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
 
-          {projects.slice(0,3).map((project, index) => (
+          {homeProjects.map((project, index) => (
 
             <motion.div
               key={project.id}
@@ -95,6 +102,18 @@ export default function Projects() {
                 {/* Content */}
 
                 <div className="p-6">
+
+                  <span
+  className={`inline-block rounded-full border px-3 py-1 text-xs ${
+    project.type === "Team"
+      ? "border-blue-400/30 bg-blue-500/10 text-blue-300"
+      : "border-purple-400/30 bg-purple-500/10 text-purple-300"
+  }`}
+>
+  {project.type === "Team"
+    ? "Team Project"
+    : "Personal Project"}
+</span>
 
                   <h3 className="text-2xl font-bold text-white">
                     {project.name}

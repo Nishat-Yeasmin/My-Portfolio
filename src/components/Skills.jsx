@@ -22,6 +22,8 @@ import {
   SiIntellijidea,
   SiCplusplus,
   SiVsco,
+  SiMysql,
+  SiVercel,
 } from "react-icons/si";
 
 
@@ -53,9 +55,19 @@ const skillCategories = [
     skills: [
       { name: "Node.js", icon: <FaNodeJs /> },
       { name: "Express.js", icon: <SiExpress /> },
-      { name: "MongoDB", icon: <SiMongodb /> },
+      
     ],
   },
+
+  
+{
+  title: "Database",
+  skills: [
+    { name: "MongoDB", icon: <SiMongodb /> },
+    { name: "MySQL", icon: <SiMysql /> },
+  ],
+},
+
 
   {
     title: "Tools",
@@ -64,6 +76,7 @@ const skillCategories = [
       { name: "GitHub", icon: <FaGithub /> },
       { name: "VS Code", icon: <SiVscodium /> },
       { name: "Intellij", icon: <SiIntellijidea /> },
+       { name: "Vercel", icon: <SiVercel /> },
     ],
   },
 ];

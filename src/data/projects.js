@@ -1,6 +1,7 @@
 export const projects = [
   {
     id: "fresh-basket",
+    type: "Personal",
 
     name: "Fresh Basket",
 
@@ -44,6 +45,7 @@ export const projects = [
 
   {
     id: "event-sphere",
+     type: "Personal",
 
     name: "Event Sphere",
 
@@ -85,6 +87,7 @@ export const projects = [
 
   {
     id: "portfolio",
+     type: "Personal",
 
     name: "Personal Portfolio",
 
@@ -121,5 +124,36 @@ export const projects = [
       "Downloadable resume.",
       "Interactive project filtering.",
     ],
+  },
+
+    {
+    id: "trip-plan-ai",
+    type: "Team",
+    name: "Trip Plan AI",
+    image: "/images/trip-plan-ai.png",
+
+    shortDescription:
+      "A collaborative travel planning web application developed as a team project.",
+
+    description:
+      "Trip Plan AI is a collaborative web development project built by a team of six members. I contributed as a Full Stack Developer, working on the application as part of the team. The project includes separate client and admin deployments.",
+
+    technologies: [
+      "React",
+    ],
+
+    live: "https://trip-plan-client.vercel.app",
+
+    adminLive: "https://trip-plan-admin.vercel.app",
+
+    github: "https://github.com/shahrierbiddut/Trip-Plan-Ai",
+
+    role: "Full Stack Developer",
+
+    teamSize: 6,
+
+    challenges: [],
+
+    future: [],
   },
 ];

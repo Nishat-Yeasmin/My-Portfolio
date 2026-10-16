@@ -55,33 +55,19 @@ const achievements = [
     image: "/certificates/Volunteering.png",
     icon: Trophy,
   },
-  {
-    id: 5,
-    title: "CodeChef Silver Star",
-    year: "2024",
-    description:
-      "Achieved Silver Star rating on CodeChef through consistent problem solving and competitive programming practice.",
-    image: "/certificates/codechef-silver.png",
-    icon: Star,
-  },
+
+{
+  id: 5,
+  title: "CodeChef Gold Badge",
+  year: "2026",
+  category: "Competitive Programming",
+  description:
+    "Solved 500 problems on CodeChef and earned a Gold Badge, marking an important milestone in my problem-solving journey.",
+  image: "/certificates/codechef-gold.png",
+  icon: Trophy,
+},
+
 ];
-
-// const cardVariants = {
-//   hidden: {
-//     opacity: 0,
-//     y: 50,
-//   },
-
-//   visible: (index) => ({
-//     opacity: 1,
-//     y: 0,
-//     transition: {
-//       duration: 0.6,
-//       delay: index * 0.15,
-//       ease: "easeOut",
-//     },
-//   }),
-// };
 
 export default function Achievements() {
   // Main page only shows first 3

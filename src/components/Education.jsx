@@ -8,7 +8,7 @@ const educationData = [
     degree: "Bachelor of Science in Computer Science & Engineering",
     institution: "Metropolitan University, Sylhet",
     duration: "2025 - Present",
-    result: "Current CGPA: 3.88 / 4.00",
+    result: "Current CGPA: 3.90 / 4.00",
     details: [
       "Studying programming, data structures, algorithms, and software development.",
       "Building skills in modern web technologies and full-stack development.",
